@@ -7,7 +7,7 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>課題タスク管理アプリケーションを作ろう</h2>
+        <h2>タスク管理</h2>
         <ul>
             <c:forEach var="task" items="${tasks}">
                 <li>
