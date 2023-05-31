@@ -12,7 +12,7 @@
 </c:if>
 
 <br /><br />
-
+<label for="title">タイトル</label><br />
 <label for="content_msg">タスク</label><br />
 <input type="text" name="content" id="content_msg" value="${task.content}" />
 <br /><br />
