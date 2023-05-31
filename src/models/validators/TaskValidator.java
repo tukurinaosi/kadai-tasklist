@@ -20,10 +20,10 @@ public class TaskValidator {
     }
 
 
-    // メッセージの必須入力チェック
+    // タスクの必須入力チェック
     private static String validateContent(String content) {
         if(content == null || content.equals("")) {
-            return "メッセージを入力してください。";
+            return "タスクを入力してください。";
         }
 
         return "";

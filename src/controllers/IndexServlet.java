@@ -43,7 +43,7 @@ public class IndexServlet extends HttpServlet {
             page = Integer.parseInt(request.getParameter("page"));
         } catch(NumberFormatException e) {}
 
-        // 最大件数と開始位置を指定してメッセージを取得
+        // 最大件数と開始位置を指定してタスクを取得
         List<Task> tasks = em.createNamedQuery("getAllTasks", Task.class)
                                    .setFirstResult(15 * (page - 1))
                                    .setMaxResults(15)
@@ -58,7 +58,7 @@ public class IndexServlet extends HttpServlet {
         request.setAttribute("tasks", tasks);
         request.setAttribute("tasks_count", tasks_count);     // 全件数
         request.setAttribute("page", page);                         // ページ数
-        // フラッシュメッセージがセッションスコープにセットされていたら
+        // フラッシュタスクがセッションスコープにセットされていたら
         // リクエストスコープに保存する（セッションスコープからは削除）
         if(request.getSession().getAttribute("flush") != null) {
             request.setAttribute("flush", request.getSession().getAttribute("flush"));
