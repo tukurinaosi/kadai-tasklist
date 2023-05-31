@@ -11,8 +11,6 @@
     </div>
 </c:if>
 
-<label for="title">タイトル</label><br />
-<input type="text" name="title" id="title" value="${task.title}" />
 <br /><br />
 
 <label for="content_msg">メッセージ</label><br />

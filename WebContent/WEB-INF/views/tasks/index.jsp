@@ -7,13 +7,14 @@
                 <c:out value="${flush}"></c:out>
             </div>
         </c:if>
-        <h2>メッセージ一覧</h2>
+        <h2>課題タスク管理アプリケーションを作ろう</h2>
         <ul>
             <c:forEach var="task" items="${tasks}">
                 <li>
                     <a href="${pageContext.request.contextPath}/show?id=${task.id}">
                         <c:out value="${task.id}" />
                     </a>
+ ：<c:out value="${task.title}"></c:out> &gt; <c:out value="${task.content}" />
 
                 </li>
             </c:forEach>
@@ -31,7 +32,7 @@
                 </c:choose>
             </c:forEach>
         </div>
-        <p><a href="${pageContext.request.contextPath}/new">新規メッセージの投稿</a></p>
+        <p><a href="${pageContext.request.contextPath}/new">新規タスクの投稿</a></p>
 
     </c:param>
 </c:import>
