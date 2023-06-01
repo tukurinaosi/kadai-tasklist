@@ -72,8 +72,5 @@ public class Task {
         this.updated_at = updated_at;
     }
 
-    public void setTitle(String title) {
-        // TODO 自動生成されたメソッド・スタブ
 
     }
-}

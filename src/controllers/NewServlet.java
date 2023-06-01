@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import models.Task;
+
 /**
  * Servlet implementation class NewServlet
  */
@@ -30,7 +32,8 @@ public class NewServlet extends HttpServlet {
         // CSRF対策
         request.setAttribute("_token", request.getSession().getId());
 
-
+     // おまじないとしてのインスタンスを生成
+        request.setAttribute("task", new Task());
 
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/new.jsp");
         rd.forward(request, response);
